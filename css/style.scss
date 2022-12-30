@@ -1,6 +1,5 @@
-$white: #ffffff;
-$black: #252525;
-$primary1: #24d278;
+// Color Variables
+@import 'variables';
 
 
 @mixin main-font {
@@ -36,7 +35,7 @@ $primary1: #24d278;
 
 body {
   @include main-font();
-  color: #0c0c0c;
+  color: inherit;
   background-color: #ffffff;
 }
 
@@ -94,6 +93,7 @@ body {
 .hero_area {
   height: 100vh;
   background-image: url(../images/hero-bg.jpg);
+  background-position: left;
   background-size: cover;
   position: relative;
   background-repeat: no-repeat;
@@ -317,11 +317,12 @@ a:focus {
 
       span {
         font-size: 5rem;
-        color: $black;
+        color: $white;
       }
     }
 
     p {
+      color: $white;
       margin-top: 15px;
     }
 
@@ -341,7 +342,7 @@ a:focus {
       }
 
       .btn-2 {
-        @include hero_btn($black, $white, 6px, 0, 20px);
+        @include hero_btn($white $white, 6px, 0, 20px);
       }
     }
   }
